@@ -318,11 +318,11 @@ const HomePage = () => {
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <View style={{flex: 5}}>
-          <View style={styles.datePickerBox}>
-            <Text style={{ color: "#000000"}}>
-              {formatD(startD)} - {formatD(endD)}
-            </Text>
-            <Pressable onPress={openDatePicker}>
+          <View>
+            <Pressable onPress={openDatePicker} style={styles.datePickerBox}>
+              <Text style={{color: '#000000'}}>
+                {formatD(startD)} - {formatD(endD)}
+              </Text>
               <Icon name="calendar" size={25} color="#198da0"></Icon>
             </Pressable>
           </View>
